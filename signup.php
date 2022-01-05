@@ -8,8 +8,6 @@ require_once("./connection.php");
 session_start();
 session_destroy();
 
-// See What happen in session
-// print_r($_SESSION);
 
 
 
@@ -23,13 +21,7 @@ if (isset($_REQUEST['btnSignUp'])) {
    $emailUser = $_REQUEST['email'];
    $passwordUser = $_REQUEST['passowrdUser'];
 
-   // // Select All Users
-   // $data_select = "SELECT * FROM users ";
-   // // get all data 
-   // // $results  =mysqli_query($conn,$data_select);
-   // // Row of data 
-   // // $data =  mysqli_fetch_assoc($results);
-   // // print($data["password"]);
+  
    $hash_pass = password_hash($passwordUser, PASSWORD_DEFAULT);
    $craeted = date('Y.m.d H.i.s');
 
